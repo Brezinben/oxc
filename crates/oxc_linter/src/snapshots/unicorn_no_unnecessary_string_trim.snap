@@ -1,0 +1,314 @@
+---
+source: crates/oxc_linter/src/tester.rs
+---
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().startsWith("-")
+   ·     ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#endsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().endsWith("-")
+   ·     ────
+   ╰────
+  help: Use `String#trimEnd()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().startsWith()
+   ·     ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#endsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().endsWith()
+   ·     ────
+   ╰────
+  help: Use `String#trimEnd()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:9]
+ 1 │ " foo ".trim().startsWith("f")
+   ·         ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#endsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:9]
+ 1 │ " foo ".trim().endsWith("o")
+   ·         ────
+   ╰────
+  help: Use `String#trimEnd()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().startsWith(" foo")
+   ·     ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#endsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().endsWith("foo ")
+   ·     ────
+   ╰────
+  help: Use `String#trimEnd()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().startsWith(`foo`)
+   ·     ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#endsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().endsWith(`foo`)
+   ·     ────
+   ╰────
+  help: Use `String#trimEnd()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:27]
+ 1 │ const prefix = "foo"; foo.trim().startsWith(prefix)
+   ·                           ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#endsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:27]
+ 1 │ const suffix = "foo"; foo.trim().endsWith(suffix)
+   ·                           ────
+   ╰────
+  help: Use `String#trimEnd()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().startsWith("foo" + "bar")
+   ·     ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:45]
+ 1 │ import {z} from "other-package"; z.string().trim().startsWith("-")
+   ·                                             ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:48]
+ 1 │ import * as z from "other-package"; z.string().trim().startsWith("-")
+   ·                                                ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:40]
+ 1 │ import {z} from "zod/mini"; z.string().trim().startsWith("-")
+   ·                                        ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:33]
+ 1 │ import z from "zod"; z.string().trim().startsWith("-")
+   ·                                 ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:38]
+ 1 │ import {z} from "zod"; z["string"]().trim().startsWith("-")
+   ·                                      ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:45]
+ 1 │ import {z} from "zod"; z.string("argument").trim().startsWith("-")
+   ·                                             ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:35]
+ 1 │ import {z} from "zod"; z.number().trim().startsWith("-")
+   ·                                   ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:53]
+ 1 │ import {z} from "zod"; function foo(z) { z.string().trim().startsWith("-"); }
+   ·                                                     ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:40]
+ 1 │ import type {z} from "zod"; z.string().trim().startsWith("-");
+   ·                                        ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#endsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:43]
+ 1 │ import type * as z from "zod"; z.string().trim().endsWith("-");
+   ·                                           ────
+   ╰────
+  help: Use `String#trimEnd()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:39]
+ 1 │ import z = require("zod"); z.string().trim().startsWith("-");
+   ·                                       ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().startsWith(undefined)
+   ·     ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#endsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().endsWith(void 0)
+   ·     ────
+   ╰────
+  help: Use `String#trimEnd()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:31]
+ 1 │ const search = undefined; foo.trim().startsWith(search)
+   ·                               ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().startsWith(123)
+   ·     ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#endsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().endsWith(false)
+   ·     ────
+   ╰────
+  help: Use `String#trimEnd()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().startsWith(null)
+   ·     ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#endsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().endsWith(1n)
+   ·     ────
+   ╰────
+  help: Use `String#trimEnd()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:7]
+ 1 │ (foo).trim().startsWith("-")
+   ·       ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:6]
+ 1 │ (foo.trim()).startsWith("-")
+   ·      ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:9]
+ 1 │ if (foo.trim().startsWith("-")) {
+   ·         ────
+ 2 │                 bar();
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:3:18]
+ 2 │                 // comment
+ 3 │                 .trim/* comment */()
+   ·                  ────
+ 4 │                 .startsWith("-")
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#endsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:37]
+ 1 │ function foo(value: string) { value.trim().endsWith("-"); }
+   ·                                     ────
+   ╰────
+  help: Use `String#trimEnd()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:37]
+ 1 │ function foo(value: string) { value.trim().startsWith("-" as const); }
+   ·                                     ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#endsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:37]
+ 1 │ function foo(value: string) { value.trim().endsWith("-" satisfies string); }
+   ·                                     ────
+   ╰────
+  help: Use `String#trimEnd()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:55]
+ 1 │ type Text = string; function foo(value: Text) { value.trim().startsWith("-"); }
+   ·                                                       ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:44]
+ 1 │ type A = A; function foo(value: A) { value.trim().startsWith("-"); }
+   ·                                            ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:46]
+ 1 │ function foo(value: string | number) { value.trim().startsWith("-"); }
+   ·                                              ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:5]
+ 1 │ foo.trim().startsWith(-1)
+   ·     ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:50]
+ 1 │ function foo(a: string, b: number) { (c ? a : b).trim().startsWith("-"); }
+   ·                                                  ────
+   ╰────
+  help: Use `String#trimStart()` instead.
+
+  ⚠ unicorn(no-unnecessary-string-trim): Unnecessary `String#trim()` before `String#startsWith()`
+   ╭─[no_unnecessary_string_trim.ts:1:203]
+ 1 │ type A0 = number; type A1 = A0 | A0; type A2 = A1 | A1; type A3 = A2 | A2; type A4 = A3 | A3; type A5 = A4 | A4; type A6 = A5 | A5; type A7 = A6 | A6; type A8 = A7 | A7; function foo(value: A8) { value.trim().startsWith("-"); }
+   ·                                                                                                                                                                                                           ────
+   ╰────
+  help: Use `String#trimStart()` instead.

@@ -9235,6 +9235,9 @@
         "unicorn/no-unnecessary-slice-end": {
           "$ref": "#/definitions/RuleNoConfig"
         },
+        "unicorn/no-unnecessary-string-trim": {
+          "$ref": "#/definitions/RuleNoConfig"
+        },
         "unicorn/no-unreadable-array-destructuring": {
           "$ref": "#/definitions/RuleNoConfig"
         },
