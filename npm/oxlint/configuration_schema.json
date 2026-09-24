@@ -9340,6 +9340,9 @@
         "unicorn/prefer-array-flat-map": {
           "$ref": "#/definitions/RuleNoConfig"
         },
+        "unicorn/prefer-array-from-range": {
+          "$ref": "#/definitions/RuleNoConfig"
+        },
         "unicorn/prefer-array-index-of": {
           "$ref": "#/definitions/RuleNoConfig"
         },

@@ -1613,6 +1613,7 @@ export interface DummyRuleMap {
   "unicorn/prefer-array-find"?: RuleNoConfig;
   "unicorn/prefer-array-flat"?: RuleNoConfig;
   "unicorn/prefer-array-flat-map"?: RuleNoConfig;
+  "unicorn/prefer-array-from-range"?: RuleNoConfig;
   "unicorn/prefer-array-index-of"?: RuleNoConfig;
   "unicorn/prefer-array-some"?: RuleNoConfig;
   "unicorn/prefer-at"?: RuleNoConfig | [AllowWarnDeny, PreferAtConfig];

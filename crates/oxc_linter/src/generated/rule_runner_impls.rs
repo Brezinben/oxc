@@ -3623,6 +3623,12 @@ impl RuleRunner for crate::rules::unicorn::prefer_array_flat_map::PreferArrayFla
     const RUN_FUNCTIONS: RuleRunFunctionsImplemented = RuleRunFunctionsImplemented::Run;
 }
 
+impl RuleRunner for crate::rules::unicorn::prefer_array_from_range::PreferArrayFromRange {
+    const NODE_TYPES: Option<&AstTypesBitset> =
+        Some(&AstTypesBitset::from_types(&[AstType::ArrayExpression, AstType::CallExpression]));
+    const RUN_FUNCTIONS: RuleRunFunctionsImplemented = RuleRunFunctionsImplemented::Run;
+}
+
 impl RuleRunner for crate::rules::unicorn::prefer_array_index_of::PreferArrayIndexOf {
     const NODE_TYPES: Option<&AstTypesBitset> =
         Some(&AstTypesBitset::from_types(&[AstType::CallExpression]));

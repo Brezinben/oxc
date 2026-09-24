@@ -637,6 +637,7 @@ pub(crate) mod unicorn {
     pub mod prefer_array_find;
     pub mod prefer_array_flat;
     pub mod prefer_array_flat_map;
+    pub mod prefer_array_from_range;
     pub mod prefer_array_index_of;
     pub mod prefer_array_some;
     pub mod prefer_at;
