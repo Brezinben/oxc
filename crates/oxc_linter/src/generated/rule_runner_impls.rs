@@ -3496,6 +3496,12 @@ impl RuleRunner for crate::rules::unicorn::no_unnecessary_slice_end::NoUnnecessa
     const RUN_FUNCTIONS: RuleRunFunctionsImplemented = RuleRunFunctionsImplemented::Run;
 }
 
+impl RuleRunner for crate::rules::unicorn::no_unnecessary_string_trim::NoUnnecessaryStringTrim {
+    const NODE_TYPES: Option<&AstTypesBitset> =
+        Some(&AstTypesBitset::from_types(&[AstType::CallExpression]));
+    const RUN_FUNCTIONS: RuleRunFunctionsImplemented = RuleRunFunctionsImplemented::Run;
+}
+
 impl RuleRunner
     for crate::rules::unicorn::no_unreadable_array_destructuring::NoUnreadableArrayDestructuring
 {
