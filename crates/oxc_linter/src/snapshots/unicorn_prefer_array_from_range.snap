@@ -1,0 +1,247 @@
+---
+source: crates/oxc_linter/src/tester.rs
+---
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...Array(length).keys()];
+   · ─────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...new Array(length).keys()];
+   · ─────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ Array.from(Array(length).keys());
+   · ────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ Array.from(new Array(length).keys());
+   · ────────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ Array.from(Array(length).keys(),);
+   · ─────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...Array(count + 1).keys()];
+   · ────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ Array.from(Array(count + 1).keys());
+   · ───────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...Array((count + 1)).keys()];
+   · ──────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...Array((count, fallback)).keys()];
+   · ────────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ Array.from((Array(length).keys()));
+   · ──────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...(Array(length).keys())];
+   · ───────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ ╭─▶ [
+ 2 │ │                   ...Array(
+ 3 │ │                       length
+ 4 │ │                   ).keys()
+ 5 │ ╰─▶             ];
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ ╭─▶ Array.from(
+ 2 │ │                   Array(
+ 3 │ │                       length
+ 4 │ │                   ).keys()
+ 5 │ ╰─▶             );
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...Array(/* keep */ length).keys()];
+   · ────────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [.../* keep */Array(length).keys()];
+   · ───────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...Array(length)/* keep */.keys()];
+   · ───────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...Array(length).keys(/* keep */)];
+   · ───────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ Array.from(/* keep */ Array(length).keys());
+   · ───────────────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...Array<number>(length).keys()];
+   · ─────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...new Array<number>(length).keys()];
+   · ─────────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...Array(length as number).keys()];
+   · ───────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...(Array(length) as number[]).keys()];
+   · ───────────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...(new Array(length) as number[]).keys()];
+   · ───────────────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...(Array(length)!).keys()];
+   · ────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...(Array(length) satisfies number[]).keys()];
+   · ──────────────────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ Array.from((Array(length) as number[]).keys());
+   · ──────────────────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...(Array(length).keys() as Iterable<number>)];
+   · ───────────────────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...(Array(length).keys()!)];
+   · ────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...(<Iterable<number>>Array(length).keys())];
+   · ─────────────────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ Array.from(Array(length).keys() as Iterable<number>);
+   · ────────────────────────────────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:24]
+ 1 │ function foo() { return[...Array(length).keys()]; }
+   ·                        ─────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:29]
+ 1 │ let length = 3; length = n; [...Array(length).keys()];
+   ·                             ─────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:34]
+ 1 │ var length = 1; var length = -1; [...Array(length).keys()];
+   ·                                  ─────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
+
+  ⚠ unicorn(prefer-array-from-range): Prefer `Array.from({length}, …)` when creating range arrays.
+   ╭─[prefer_array_from_range.ts:1:1]
+ 1 │ [...Array(2 * 3).keys()];
+   · ────────────────────────
+   ╰────
+  help: Use `Array.from({length: …}, (_, index) => index)` instead.
