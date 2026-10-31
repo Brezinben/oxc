@@ -1596,6 +1596,7 @@ export interface DummyRuleMap {
   "unicorn/no-unnecessary-array-splice-count"?: RuleNoConfig;
   "unicorn/no-unnecessary-await"?: RuleNoConfig;
   "unicorn/no-unnecessary-slice-end"?: RuleNoConfig;
+  "unicorn/no-unnecessary-string-trim"?: RuleNoConfig;
   "unicorn/no-unreadable-array-destructuring"?: RuleNoConfig;
   "unicorn/no-unreadable-iife"?: RuleNoConfig;
   "unicorn/no-useless-collection-argument"?: RuleNoConfig;
