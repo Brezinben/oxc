@@ -1,0 +1,34 @@
+# Fork only: oxc's own CI runs on runners that forks cannot use.
+name: Fork linter check
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Branch to check
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      CI: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+      - run: rustup show
+      - uses: Swatinem/rust-cache@v2
+        with:
+          shared-key: oxc-linter
+      - name: Generated files are up to date
+        run: cargo lintgen && git diff --exit-code
+      - run: cargo fmt --all --check
+      - run: cargo clippy -p oxc_linter --all-targets -- -D warnings
+      - run: cargo test -p oxc_linter --lib
+      - name: No pending snapshot
+        run: git status --porcelain && test -z "$(git status --porcelain)"
